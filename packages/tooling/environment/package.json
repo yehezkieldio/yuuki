@@ -1,0 +1,21 @@
+{
+    "name": "@yuuki/environment",
+    "private": true,
+    "scripts": {
+        "typecheck": "tsc --noEmit",
+        "test": "bun test"
+    },
+    "dependencies": {
+        "@t3-oss/env-core": "^0.11.0",
+        "zod": "^3.23.8"
+    },
+    "devDependencies": {
+        "@yuuki/typescript": "workspace:*",
+        "@types/bun": "latest",
+        "typescript": "^5"
+    },
+    "exports": {
+        ".": "./env.ts",
+        "./discord": "./discord.ts"
+    }
+}

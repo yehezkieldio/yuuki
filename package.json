@@ -1,0 +1,29 @@
+{
+    "name": "yuuki",
+    "private": true,
+    "scripts": {
+        "build": "turbo build --log-prefix none",
+        "test": "turbo test --log-prefix none",
+        "typecheck": "turbo typecheck --log-prefix none",
+        "start:discord-bot": "turbo start --filter @yuuki/discord-bot --log-prefix none",
+        "start:api": "turbo start --filter @yuuki/api --log-prefix none",
+        "db:push": "turbo db:push",
+        "db:studio": "turbo db:studio",
+        "db:generate": "turbo db:generate",
+        "db:drop": "turbo db:drop",
+        "db:migrate": "turbo db:migrate",
+        "biome": "biome check .",
+        "biome:fix": "biome check . --write"
+    },
+    "devDependencies": {
+        "@biomejs/biome": "^1.9.2",
+        "lefthook": "^1.7.17",
+        "turbo": "^2.1.2",
+        "typescript": "^5.6.2"
+    },
+    "engines": {
+        "node": ">=18"
+    },
+    "packageManager": "bun@1.1.29",
+    "workspaces": ["apps/*", "packages/*", "packages/plugins/*", "packages/tooling/*"]
+}
