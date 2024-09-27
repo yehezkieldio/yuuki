@@ -1,0 +1,20 @@
+{
+    "name": "@yuuki/logger",
+    "private": true,
+    "version": "0.0.0",
+    "scripts": {
+        "typecheck": "tsc --noEmit"
+    },
+    "dependencies": {
+        "consola": "^3.2.3"
+    },
+    "devDependencies": {
+        "@yuuki/typescript": "workspace:*",
+        "@types/bun": "latest",
+        "@types/node": "latest",
+        "typescript": "^5"
+    },
+    "exports": {
+        ".": "./logger.ts"
+    }
+}

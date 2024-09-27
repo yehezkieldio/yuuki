@@ -1,5 +1,4 @@
 /// <reference types="bun" />
-
 import { beforeEach, describe, expect, it } from "bun:test";
 
 describe("YuukiEnvironment", () => {
