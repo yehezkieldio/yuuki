@@ -1,7 +1,6 @@
 {
     "name": "@yuuki/database",
     "private": true,
-    "version": "0.0.0",
     "scripts": {
         "db:push": "bun --env-file ../../.env drizzle-kit push",
         "db:studio": "bun --env-file ../../.env drizzle-kit studio",

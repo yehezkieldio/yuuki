@@ -1,0 +1,27 @@
+{
+    "name": "@yuuki/plugin-custom-stores",
+    "version": "0.0.0",
+    "private": true,
+    "scripts": {
+        "typecheck": "tsc --noEmit"
+    },
+    "dependencies": {
+        "@yuuki/environment": "workspace:*",
+        "@sapphire/framework": "^5.2.1",
+        "@sapphire/pieces": "^4.3.1"
+    },
+    "devDependencies": {
+        "@yuuki/typescript": "workspace:*",
+        "@types/bun": "latest",
+        "@types/node": "latest",
+        "typescript": "^5"
+    },
+    "exports": {
+        ".": {
+            "import": "./index.ts"
+        },
+        "./register": {
+            "import": "./register.ts"
+        }
+    }
+}

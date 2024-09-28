@@ -1,0 +1,45 @@
+{
+    "name": "@yuuki/discord-bot",
+    "version": "1.0.0",
+    "private": true,
+    "main": "src/main.ts",
+    "type": "module",
+    "scripts": {
+        "start": "bun --env-file ../../.env .",
+        "typecheck": "tsc --noEmit"
+    },
+    "dependencies": {
+        "@yuuki/database": "workspace:*",
+        "@yuuki/environment": "workspace:*",
+        "@yuuki/logger": "workspace:*",
+        "@yuuki/plugin-custom-stores": "workspace:*",
+        "@sapphire/discord.js-utilities": "^7.3.0",
+        "@sapphire/fetch": "^3.0.3",
+        "@sapphire/framework": "^5.2.1",
+        "@sapphire/pieces": "^4.3.1",
+        "@sapphire/plugin-i18next": "^7.1.2",
+        "@sapphire/plugin-scheduled-tasks": "^10.0.1",
+        "@sapphire/plugin-subcommands": "^7.0.0",
+        "@sapphire/time-utilities": "^1.7.12",
+        "@sapphire/utilities": "^3.17.0",
+        "chrono-node": "2.7.7",
+        "dayjs": "^1.11.13",
+        "discord.js": "^14.16.2"
+    },
+    "devDependencies": {
+        "@yuuki/typescript": "workspace:*",
+        "@types/bun": "latest",
+        "@types/node": "latest",
+        "typescript": "^5"
+    },
+    "imports": {
+        "#arguments/*": "./src/arguments/*.ts",
+        "#commands/*": "./src/commands/*.ts",
+        "#interactions/*": "./src/interaction-handlers/*.ts",
+        "#lib/*": "./src/lib/*.ts",
+        "#listeners/*": "./src/listeners/*.ts",
+        "#preconditions/*": "./src/preconditions/*.ts",
+        "#services/*": "./src/services/*.ts",
+        "#utilities/*": "./src/utilities/*.ts"
+    }
+}
