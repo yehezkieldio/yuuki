@@ -9,6 +9,7 @@
         "typecheck": "tsc --noEmit"
     },
     "dependencies": {
+        "@yuuki/utils": "workspace:*",
         "@yuuki/database": "workspace:*",
         "@yuuki/environment": "workspace:*",
         "@yuuki/logger": "workspace:*",
