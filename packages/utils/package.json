@@ -1,0 +1,24 @@
+{
+    "name": "@yuuki/utils",
+    "private": true,
+    "version": "0.0.0",
+    "scripts": {
+        "typecheck": "tsc --noEmit",
+        "test": "bun test"
+    },
+    "dependencies": {
+        "type-fest": "^4.26.1"
+    },
+    "devDependencies": {
+        "@yuuki/typescript": "workspace:*",
+        "@types/bun": "latest",
+        "@types/node": "latest",
+        "typescript": "^5"
+    },
+    "imports": {
+        "#src/*": "./src/*.ts"
+    },
+    "exports": {
+        "./package": "./src/package.ts"
+    }
+}
