@@ -1,5 +1,5 @@
 {
-    "name": "yuuki",
+    "name": "@yuuki/source",
     "private": true,
     "scripts": {
         "build": "turbo build --log-prefix none",
