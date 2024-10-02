@@ -3,7 +3,7 @@ import { SubcommandPluginEvents } from "@sapphire/plugin-subcommands";
 
 const Events = {};
 
-export const ImperiaEvents = {
+export const YuukiEvents = {
     ...SapphireEvents,
     ...SubcommandPluginEvents,
     ...Events,

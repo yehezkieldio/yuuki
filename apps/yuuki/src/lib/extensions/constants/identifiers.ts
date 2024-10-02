@@ -22,7 +22,7 @@ enum Identifiers {
     ArgumentCommandError = "commandError",
 }
 
-export const ImperiaIdentifiers = {
+export const YuukiIdentifiers = {
     ...SapphireIdentifiers,
     ...SubcommandPluginIdentifiers,
     ...Identifiers,
