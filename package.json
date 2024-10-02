@@ -6,7 +6,6 @@
         "test": "turbo test --log-prefix none",
         "typecheck": "turbo typecheck --log-prefix none",
         "start:discord-bot": "turbo start --filter yuuki --log-prefix none",
-        "start:api": "turbo start --filter @yuuki/api --log-prefix none",
         "db:push": "turbo db:push",
         "db:studio": "turbo db:studio",
         "db:generate": "turbo db:generate",
