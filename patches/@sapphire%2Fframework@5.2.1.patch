@@ -1,0 +1,21 @@
+diff --git a/dist/esm/index.d.mts b/dist/esm/index.d.mts
+index 46c94482da592f9ece00c78f117f734867b8a87f..686f0a5ebb8edf660f972fbceced0503e3112865 100644
+--- a/dist/esm/index.d.mts
++++ b/dist/esm/index.d.mts
+@@ -12,6 +12,7 @@ export { AliasPiece, AliasPieceJSON, AliasPieceOptions, AliasStore, Container, L
+ import { SlashCommandBuilder, SlashCommandSubcommandsOnlyBuilder, SlashCommandOptionsOnlyBuilder, ContextMenuCommandBuilder } from '@discordjs/builders';
+ import { RateLimitManager } from '@sapphire/ratelimits';
+ import { EventEmitter } from 'node:events';
++import type { YuukiLogger } from '@yuuki/logger';
+ 
+ /**
+  * The UserError class to be emitted in the pieces.
+@@ -3469,7 +3470,7 @@ declare module 'discord.js' {
+ declare module '@sapphire/pieces' {
+     interface Container {
+         client: SapphireClient;
+-        logger: ILogger;
++        logger: YuukiLogger;
+         applicationCommandRegistries: {
+             acquire: typeof acquire;
+         };

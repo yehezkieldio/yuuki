@@ -15,6 +15,7 @@
         "typescript": "^5"
     },
     "exports": {
-        ".": "./logger.ts"
+        ".": "./logger.ts",
+        "./utils": "./consola-utils.ts"
     }
 }

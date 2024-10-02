@@ -135,6 +135,14 @@ export class YuukiLogger implements ILogger {
         return this;
     }
 
+    /**
+     * Returns the Consola instance.
+     * @returns The Consola instance.
+     */
+    public getConsolaInstance(): ConsolaInstance {
+        return this.instance;
+    }
+
     /* -------------------------------------------------------------------------- */
 
     public has(level: LogLevel): boolean {
