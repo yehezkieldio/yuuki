@@ -14,9 +14,18 @@ export interface YuukiClientOptions extends SapphireClientOptions, ClientOptions
     overrideApplicationCommandsRegistries?: boolean;
 }
 
+/**
+ * A custom client for the Yuuki bot.
+ */
 export class YuukiClient extends SapphireClient {
+    /**
+     * Creates a new Yuuki client.
+     * @param options The options for the client.
+     */
     constructor(options: YuukiClientOptions) {
         super(options);
+
+        container.logger.getConsolaInstance().log("\n\n\nCAST IN THE NAME OF GOD: YE NOT GUILTY\n\n\n");
 
         container.logger.info(`YuukiClient: Running on a ${envDiscord.NODE_ENV} environment.`);
 

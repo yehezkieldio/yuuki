@@ -5,7 +5,7 @@
         "build": "turbo build --log-prefix none",
         "test": "turbo test --log-prefix none",
         "typecheck": "turbo typecheck --log-prefix none",
-        "start:discord-bot": "turbo start --filter @yuuki/discord-bot --log-prefix none",
+        "start:discord-bot": "turbo start --filter yuuki --log-prefix none",
         "start:api": "turbo start --filter @yuuki/api --log-prefix none",
         "db:push": "turbo db:push",
         "db:studio": "turbo db:studio",
@@ -25,5 +25,8 @@
         "node": ">=18"
     },
     "packageManager": "bun@1.1.29",
-    "workspaces": ["apps/*", "packages/*", "packages/plugins/*", "packages/tooling/*"]
+    "workspaces": ["apps/*", "packages/*", "packages/plugins/*", "packages/tooling/*"],
+    "patchedDependencies": {
+        "@sapphire/framework@5.2.1": "patches/@sapphire%2Fframework@5.2.1.patch"
+    }
 }
