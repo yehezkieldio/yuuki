@@ -23,10 +23,9 @@ export const configuration: YuukiClientOptions = {
     defaultPrefix: envDiscord.DEFAULT_PREFIX,
     fetchPrefix: async (context: Message | CommandInteraction): Promise<string> => {
         const guildId: string = context.guildId ?? (context.guild?.id as string);
-        container.logger.debug(`YuukiConfiguration: Fetching prefix for guild ${guildId}.`);
+        container.logger.debug(`YuukiConfiguration: Fetching messag eprefix for guild ${guildId}.`);
 
-        return envDiscord.DEFAULT_PREFIX;
-        // return container.utilities.guild.getPrefix(guildId);
+        return (await container.services.guild.getMessagePrefix(guildId)) ?? envDiscord.DEFAULT_PREFIX;
     },
     intents: [
         GatewayIntentBits.MessageContent,
@@ -37,9 +36,9 @@ export const configuration: YuukiClientOptions = {
     i18n: {
         fetchLanguage: async (context: InternationalizationContext): Promise<string | null> => {
             if (!context.guild) return envDiscord.DEFAULT_LANGUAGE;
-            container.logger.debug(`YuukiConfiguration: Fetching language for guild ${context.guild.id}.`);
+            container.logger.debug(`YuukiConfiguration: Fetching language code for guild ${context.guild.id}.`);
 
-            return container.services.guild.getLanguageCode(context.guild.id);
+            return (await container.services.guild.getLanguageCode(context.guild.id)) ?? envDiscord.DEFAULT_LANGUAGE;
         },
     },
     loadApplicationCommandRegistriesStatusListeners: envDiscord.NODE_ENV === "development",

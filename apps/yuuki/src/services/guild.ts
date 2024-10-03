@@ -39,4 +39,27 @@ export class GuildService extends Service {
 
         return result.language;
     }
+
+    /**
+     * Get the message prefix for a guild.
+     * @param guildId The guild ID to get the message prefix from.
+     * @returns The message prefix.
+     */
+    public async getMessagePrefix(guildId: string) {
+        const [result] = await database
+            .select({
+                prefix: guildSettings.prefix,
+            })
+            .from(guildSettings)
+            .where(eq(guildSettings.guildId, guildId));
+
+        if (!result) {
+            throw new UserError({
+                identifier: YuukiIdentifiers.ServiceError,
+                message: "Failed to get guild message prefix.",
+            });
+        }
+
+        return result.prefix;
+    }
 }
