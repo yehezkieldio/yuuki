@@ -10,7 +10,7 @@ export const Colors = {
 };
 
 export class YuukiEmbedBuilder extends EmbedBuilder {
-    public constructor() {
+    constructor() {
         super();
         this.setColor(Colors.primary);
     }

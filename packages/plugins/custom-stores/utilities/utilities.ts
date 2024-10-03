@@ -6,7 +6,7 @@ import type { Utility } from "./utility";
 export class Utilities {
     public readonly store: UtilitiesStore;
 
-    public constructor() {
+    constructor() {
         //@ts-ignore Bypass TypeScript check for dynamic property assignment
         container.utilities = this;
         this.store = new UtilitiesStore();

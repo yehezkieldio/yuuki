@@ -6,7 +6,7 @@ import { ServicesStore } from "./service-store";
 export class Services {
     public readonly store: ServicesStore;
 
-    public constructor() {
+    constructor() {
         //@ts-ignore Bypass TypeScript check for dynamic property assignment
         container.services = this;
         this.store = new ServicesStore();
