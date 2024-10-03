@@ -39,8 +39,6 @@ export class YuukiClient extends SapphireClient {
     }
 
     public override async login(token: string): Promise<string> {
-        container.logger.info("YuukiClient: Logging in...");
-
         // Verify if there is a connection and the tables are created in the database
         container.logger.info("YuukiClient: Connected to the PostgreSQL database.");
         try {
@@ -62,7 +60,6 @@ export class YuukiClient extends SapphireClient {
         await connection.end({
             timeout: 3,
         });
-        container.logger.info("ImperiaClient: Disconnected from the PostgresQL database.");
 
         return super.destroy();
     }
