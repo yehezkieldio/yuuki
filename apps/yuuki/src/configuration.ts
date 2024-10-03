@@ -39,8 +39,7 @@ export const configuration: YuukiClientOptions = {
             if (!context.guild) return envDiscord.DEFAULT_LANGUAGE;
             container.logger.debug(`YuukiConfiguration: Fetching language for guild ${context.guild.id}.`);
 
-            return envDiscord.DEFAULT_LANGUAGE;
-            // return container.utilities.guild.getLanguage(context.guild.id);
+            return container.services.guild.getLanguageCode(context.guild.id);
         },
     },
     loadApplicationCommandRegistriesStatusListeners: envDiscord.NODE_ENV === "development",

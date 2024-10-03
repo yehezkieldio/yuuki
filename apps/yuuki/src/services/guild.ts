@@ -1,9 +1,10 @@
 import { UserError } from "@sapphire/framework";
+
 import { database, eq } from "@yuuki/database";
 import { guildSettings } from "@yuuki/database/schema";
-import { YuukiIdentifiers } from "#lib/extensions/constants/identifiers";
-
 import { Service } from "@yuuki/plugin-custom-stores";
+
+import { YuukiIdentifiers } from "#lib/extensions/constants/identifiers";
 
 type SelectGuildSettings = typeof guildSettings.$inferSelect;
 export type GuildSettings = Omit<SelectGuildSettings, "id">;
