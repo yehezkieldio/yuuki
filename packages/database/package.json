@@ -12,7 +12,7 @@
     "dependencies": {
         "@yuuki/environment": "workspace:*",
         "@yuuki/logger": "workspace:*",
-        "drizzle-orm": "^0.34.0",
+        "drizzle-orm": "^0.35.0",
         "postgres": "^3.4.4"
     },
     "devDependencies": {
