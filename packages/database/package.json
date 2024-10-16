@@ -12,14 +12,14 @@
     "dependencies": {
         "@yuuki/environment": "workspace:*",
         "@yuuki/logger": "workspace:*",
-        "drizzle-orm": "^0.34.0",
+        "drizzle-orm": "^0.35.0",
         "postgres": "^3.4.4"
     },
     "devDependencies": {
         "@yuuki/typescript": "workspace:*",
         "@types/bun": "latest",
         "@types/node": "latest",
-        "drizzle-kit": "^0.25.0",
+        "drizzle-kit": "^0.26.0",
         "typescript": "^5"
     },
     "exports": {
